@@ -9,16 +9,22 @@ Object.entries(MeteoriteData).forEach(([key, value]) => rings.push(value.mass));
 
 function sketch(p) {
   p.setup = function() {
-    p.createCanvas(1440, 900);
-    p.stroke("#50E3C2");
+    p.createCanvas(1440 * 2, 900 * 2);
+    p.strokeWeight(2);
+    p.colorMode(p.RGB, 900);
     p.noFill();
+    p.noLoop();
+    p.filter(p.BLUR, 3);
     p.background("black");
   };
 
   p.draw = function() {
-    rings.map(ring =>
-      p.ellipse(300, 300, ring * circleMultiplier, ring * circleMultiplier)
-    );
+    let strokeColor = 1;
+    rings.map(ring => {
+      p.ellipse(300, 300, ring * circleMultiplier, ring * circleMultiplier);
+      p.stroke(strokeColor, strokeColor, 900);
+      strokeColor++;
+    });
   };
 }
 
