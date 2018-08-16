@@ -19,11 +19,13 @@ function sketch(p) {
   };
 
   p.draw = function() {
-    let strokeColor = 1;
+    let strokeColor = 0;
     rings.map(ring => {
-      p.ellipse(300, 300, ring * circleMultiplier, ring * circleMultiplier);
-      p.stroke(strokeColor, strokeColor, 900);
-      strokeColor++;
+      return (
+        p.ellipse(300, 300, ring * circleMultiplier, ring * circleMultiplier),
+        p.stroke(strokeColor, strokeColor, 900),
+        strokeColor++
+      );
     });
   };
 }
