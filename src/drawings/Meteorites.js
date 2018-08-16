@@ -30,7 +30,7 @@ function sketch(p) {
   };
 }
 
-export default class App extends Component {
+export default class Meteorites extends Component {
   render() {
     return <P5Wrapper sketch={sketch} />;
   }
