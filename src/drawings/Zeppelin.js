@@ -6,7 +6,7 @@ const canvasWidth = 1440;
 const canvasHeight = 1200;
 const multiplier = 6;
 let midiArray = [];
-let xPos = 0;
+let lineNum = 0;
 
 Object.entries(Midi.notesVocals).forEach(([key, value]) =>
   midiArray.push(value)
@@ -30,8 +30,8 @@ function sketch(p) {
       return (
         p.line(0, 0, note.midi * multiplier, 0),
         p.stroke(`hsb(${hue}, 100%, 100%)`),
-        p.rotate(p.TWO_PI / xPos),
-        xPos++
+        p.rotate(p.TWO_PI / lineNum),
+        lineNum++
       );
     });
   };
