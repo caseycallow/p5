@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import AutumnLeaves from "./drawings/AutumnLeaves";
+import Zeppelin from "./drawings/Zeppelin";
 import registerServiceWorker from "./registerServiceWorker";
 
-ReactDOM.render(<AutumnLeaves />, document.getElementById("root"));
+ReactDOM.render(<Zeppelin />, document.getElementById("root"));
 registerServiceWorker();
