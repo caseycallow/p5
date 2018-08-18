@@ -15,7 +15,7 @@ Object.entries(Midi.notesVocals).forEach(([key, value]) =>
 function sketch(p) {
   p.setup = function() {
     p.createCanvas(canvasWidth, canvasHeight);
-    p.strokeWeight(1.3);
+    p.strokeWeight(2);
     p.colorMode(p.HSB);
     p.noFill();
     p.noLoop();
