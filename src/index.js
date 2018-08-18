@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import Meteorites from "./drawings/Meteorites";
+import AutumnLeaves from "./drawings/AutumnLeaves";
 import registerServiceWorker from "./registerServiceWorker";
 
-ReactDOM.render(<Meteorites />, document.getElementById("root"));
+ReactDOM.render(<AutumnLeaves />, document.getElementById("root"));
 registerServiceWorker();
