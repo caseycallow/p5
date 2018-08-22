@@ -5,6 +5,7 @@ import Midi from "./Chopin.json";
 const canvasWidth = 1440;
 const canvasHeight = 1200;
 const multiplier = 6;
+const animationSpeed = 10;
 let midiArray = [];
 let lineNum = 0;
 
@@ -26,11 +27,13 @@ function sketch(p) {
     p.translate(p.width / 2, p.height / 2);
 
     midiArray.map(note => {
-      const hue = p.floor(note.velocity * 250 ** 1.1);
+      const hue = p.floor(note.velocity * 300 ** 1.1);
       return (
-        p.line(0, 0, note.midi * multiplier, 0),
-        p.stroke(`hsb(${hue}, 100%, 100%)`),
-        p.rotate(p.TWO_PI / lineNum),
+        setTimeout(() => {
+          p.line(0, 0, note.midi * multiplier, 0);
+          p.stroke(`hsb(${hue}, 90%, 100%)`);
+          p.rotate(p.TWO_PI / lineNum);
+        }, lineNum * animationSpeed),
         lineNum++
       );
     });
