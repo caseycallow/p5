@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import Zeppelin from "./drawings/Zeppelin";
+import Chopin from "./drawings/Chopin";
 import registerServiceWorker from "./registerServiceWorker";
 
-ReactDOM.render(<Zeppelin />, document.getElementById("root"));
+ReactDOM.render(<Chopin />, document.getElementById("root"));
 registerServiceWorker();
